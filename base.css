@@ -1,0 +1,547 @@
+/* ========================================
+   ملف التنسيق الأساسي المشترك لجميع الصفحات
+   ======================================== */
+
+/* تعريف المتغيرات العامة للألوان والخصائص */
+:root {
+    --primary-color: #3792AC;         /* اللون الأساسي - أزرق فيروزي */
+    --secondary-color: #2B5562;       /* اللون الثانوي - أزرق داكن */
+    --accent-color: #8BC34A;          /* لون التمييز - أخضر فاتح */
+    --neutral-color: #A0B4C2;         /* اللون المحايد - رمادي مزرق */
+    --background-color: #FFFFFF;      /* لون الخلفية - أبيض */
+    --text-color: #333333;            /* لون النص الأساسي - رمادي داكن */
+    --light-text-color: #f4f4f4;      /* لون النص الفاتح - أبيض مائل للرمادي */
+    --border-radius: 8px;             /* نصف قطر الحواف المدورة */
+    --box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* ظل العناصر */
+    --transition: 0.3s ease;          /* الانتقال السلس */
+}
+
+/* إعادة تعيين الخصائص الافتراضية لجميع العناصر */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* تنسيق العنصر الأساسي للجسم */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: linear-gradient(120deg, #f8fafc 0%, #e0f7fa 100%);
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* تطبيق الخط العربي والاتجاه من اليمين لليسار عند تفعيل اللغة العربية */
+body.ar {
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+}
+
+/* الحاوي الرئيسي لمحتوى الصفحة */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* تضمين المحتوى الرئيسي ليأخذ المساحة المتاحة */
+main {
+    flex: 1;
+}
+
+/* ========================================
+   تنسيق منطقة الرأس (Header) المحسنة
+   ======================================== */
+
+header {
+    background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,250,252,0.95) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #333333;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border-bottom: 1px solid rgba(55, 146, 172, 0.1);
+    transition: all 0.3s ease;
+}
+
+header.scrolled {
+    background: rgba(255,255,255,0.98);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    padding: 0.7rem 0;
+}
+
+header .container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+/* تنسيق اللوجو */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-self: start;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    max-width: 220px;
+    object-fit: contain;
+    transition: all var(--transition);
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.logo:hover {
+    transform: scale(1.03);
+    filter: drop-shadow(0 4px 8px rgba(55, 146, 172, 0.3));
+}
+
+/* تنسيق قائمة التنقل */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, rgba(55, 146, 172, 0.05) 0%, rgba(139, 195, 74, 0.03) 100%);
+    padding: 10px 15px;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(55, 146, 172, 0.15);
+    box-shadow: 0 2px 10px rgba(55, 146, 172, 0.1);
+}
+
+.navbar nav ul li {
+    margin: 0;
+    position: relative;
+}
+
+.navbar nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 12px 20px;
+    display: block;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    min-width: 80px;
+    text-align: center;
+}
+
+.navbar nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    transition: width 0.3s ease;
+    border-radius: 1px;
+}
+
+.navbar nav ul li a:hover::after,
+.navbar nav ul li a.active::after {
+    width: 70%;
+}
+
+.navbar nav ul li a:hover,
+.navbar nav ul li a:focus {
+    color: var(--primary-color);
+    background: linear-gradient(135deg, rgba(55, 146, 172, 0.12) 0%, rgba(139, 195, 74, 0.08) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(55, 146, 172, 0.12);
+}
+
+.navbar nav ul li a.active {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(55, 146, 172, 0.4);
+    font-weight: 700;
+}
+
+.navbar nav ul li a.active::after {
+    background: rgba(255,255,255,0.3);
+    width: 70%;
+}
+
+/* تنسيق منطقة الأزرار */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-self: end;
+}
+
+.lang-switcher {
+    position: relative;
+}
+
+.lang-switcher button {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    color: var(--light-text-color);
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 600;
+    font-size: 0.9rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(43, 85, 98, 0.3);
+    min-width: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.lang-switcher button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+    transform: rotate(45deg);
+    transition: all 0.6s;
+    opacity: 0;
+}
+
+.lang-switcher button:hover::before {
+    animation: shimmer 1.5s ease-in-out infinite;
+}
+
+.lang-switcher button:hover,
+.lang-switcher button:focus {
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--primary-color) 100%);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(139, 195, 74, 0.4);
+}
+
+.lang-icon {
+    font-size: 0.9rem;
+}
+
+/* زر القائمة للموبايل */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle:hover {
+    background: rgba(55, 146, 172, 0.1);
+    transform: scale(1.1);
+}
+
+/* تنسيق زر الوضع الليلي/النهاري */
+.theme-switcher {
+    position: relative;
+}
+
+.theme-switcher button {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: var(--light-text-color);
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 1rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-switcher button:hover,
+.theme-switcher button:focus {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+}
+
+.theme-switcher button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+    transform: rotate(45deg);
+    transition: all 0.6s;
+    opacity: 0;
+}
+
+.theme-switcher button:hover::before {
+    animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* الوضع الليلي */
+body.dark-mode {
+    --background-color: #1a1a1a;
+    --text-color: #e5e5e5;
+    --primary-color: #60a5fa;
+    --secondary-color: #374151;
+    --accent-color: #10b981;
+    --neutral-color: #6b7280;
+    --light-text-color: #f9fafb;
+    --box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    background: linear-gradient(120deg, #181c1f 0%, #23272b 100%);
+}
+
+body.dark-mode header {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(31, 31, 31, 0.95) 100%);
+    border-bottom: 1px solid rgba(96, 165, 250, 0.2);
+}
+
+body.dark-mode .navbar nav ul {
+    background: linear-gradient(135deg, rgba(96, 165, 250, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
+    border: 1px solid rgba(96, 165, 250, 0.2);
+}
+
+/* تنسيق الأقسام العامة */
+section {
+    padding: 60px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 10%;
+    width: 80%;
+    height: 60px;
+    background: radial-gradient(circle, var(--accent-color) 0%, transparent 80%);
+    opacity: 0.07;
+    z-index: 0;
+    pointer-events: none;
+}
+
+section:nth-of-type(odd) {
+    background-color: rgba(160, 180, 194, 0.1);
+}
+
+section h3 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    position: relative;
+}
+
+section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+/* Footer */
+footer {
+    background: var(--secondary-color);
+    color: var(--light-text-color);
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+/* الرسوم المتحركة */
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+    100% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+}
+
+/* التصميم المتجاوب */
+@media (max-width: 768px) {
+    header .container {
+        grid-template-columns: auto auto;
+        gap: 15px;
+        justify-content: space-between;
+    }
+    
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(255,255,255,0.98);
+        backdrop-filter: blur(15px);
+        box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        border-radius: 0 0 20px 20px;
+        z-index: 999;
+    }
+    
+    .navbar.active {
+        display: block;
+        animation: fadeInSlide 0.3s ease-out;
+    }
+    
+    .navbar nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 20px;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    
+    .navbar nav ul li {
+        width: 100%;
+        border-bottom: 1px solid rgba(55, 146, 172, 0.1);
+    }
+    
+    .navbar nav ul li:last-child {
+        border-bottom: none;
+    }
+    
+    .navbar nav ul li a {
+        padding: 15px 20px;
+        font-size: 1rem;
+        border-radius: 12px;
+        margin: 5px 0;
+        text-align: right;
+    }
+    
+    body.ar .navbar nav ul li a {
+        text-align: left;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+        order: 1;
+    }
+    
+    .header-actions {
+        order: 2;
+        gap: 10px;
+    }
+    
+    .logo {
+        height: 50px;
+    }
+    
+    .theme-switcher button {
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+    
+    .lang-switcher button {
+        padding: 10px 12px;
+        font-size: 0.8rem;
+        min-width: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    header {
+        padding: 0.6rem 0;
+    }
+    
+    header .container {
+        gap: 12px;
+    }
+    
+    .logo {
+        height: 40px;
+    }
+    
+    .header-actions {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .theme-switcher button {
+        width: 35px;
+        height: 35px;
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+    
+    .lang-switcher button {
+        padding: 8px 10px;
+        font-size: 0.75rem;
+        min-width: 55px;
+    }
+}

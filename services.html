@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="استكشف خدمات البيوت الذكية الشاملة من تطوير العقارات والاستثمار إلى الإدارة والتسويق مع أحدث التقنيات الذكية">
+    <meta name="keywords" content="البيوت الذكية, خدمات عقارية, تطوير عقاري, استثمار عقاري, إدارة العقارات, التسويق العقاري, تقنيات ذكية, أتمتة المنزل">
+    <meta name="author" content="البيوت الذكية - Albyout Alzakiya">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="خدماتنا المتخصصة - البيوت الذكية">
+    <meta property="og:description" content="خدمات عقارية شاملة من التطوير إلى الإدارة والاستثمار مع أحدث التقنيات الذكية">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="logo.png">
+    
+    <title data-en="Smart Real Estate Services - Albyout Alzakiya" data-ar="خدمات العقارات الذكية - البيوت الذكية">Smart Real Estate Services - Albyout Alzakiya</title>
+    
+    <!-- Preconnect for better performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Base stylesheet (shared styles) -->
+    <link rel="stylesheet" href="base.css">
+    <!-- Page-specific stylesheet -->
+    <link rel="stylesheet" href="services.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <!-- Company logo -->
+            <div class="logo-container">
+                <img src="logo.png" alt="البيوت الذكية - Albyout Alzakiya Smart Homes" class="logo">
+            </div>
+            
+            <!-- Navigation menu -->
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                        <li><a href="about.html" data-en="About Us" data-ar="من نحن">About Us</a></li>
+                        <li><a href="services.html" data-en="Services" data-ar="خدماتنا" class="active">Services</a></li>
+                        <li><a href="contact.html" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <!-- Header actions -->
+            <div class="header-actions">
+                <!-- Theme toggle button -->
+                <div class="theme-switcher">
+                    <button id="theme-toggle" data-theme="light" aria-label="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+                
+                <div class="lang-switcher">
+                    <button id="lang-toggle" data-lang="en" aria-label="Toggle Language">
+                        <span class="lang-icon">🌐</span>
+                        <span data-en="العربية" data-ar="English">العربية</span>
+                    </button>
+                </div>
+                
+                <!-- Mobile menu toggle button -->
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section for Services page -->
+        <section class="hero">
+            <div class="hero-background" style="background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600');" onerror="this.style.backgroundImage='url(https://placehold.co/1200x600/3792AC/FFFFFF?text=Smart+Home+Services)';"></div>
+            <div class="container">
+                <h1 data-en="Our Professional Smart Home Services" data-ar="خدماتنا المتخصصة في البيوت الذكية">Our Professional Smart Home Services</h1>
+                <p data-en="Comprehensive smart real estate solutions integrating cutting-edge technology with traditional expertise - from development to management and investment guidance." data-ar="حلول عقارية ذكية شاملة تدمج أحدث التقنيات مع الخبرة التقليدية - من التطوير إلى الإدارة والاستشارات الاستثمارية.">Comprehensive smart real estate solutions integrating cutting-edge technology with traditional expertise - from development to management and investment guidance.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h4>150+</h4>
+                        <p data-en="Smart Projects" data-ar="مشروع ذكي">Smart Projects</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>500+</h4>
+                        <p data-en="Happy Clients" data-ar="عميل سعيد">Happy Clients</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>95%</h4>
+                        <p data-en="Satisfaction Rate" data-ar="معدل الرضا">Satisfaction Rate</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Overview -->
+        <section class="services-overview animate-on-scroll">
+            <div class="container">
+                <h2 data-en="Why Choose Our Smart Services?" data-ar="لماذا تختار خدماتنا الذكية؟">Why Choose Our Smart Services?</h2>
+                <div class="overview-grid">
+                    <div class="overview-item">
+                        <i class="fas fa-microchip"></i>
+                        <h4 data-en="Smart Technology Integration" data-ar="تكامل التقنيات الذكية">Smart Technology Integration</h4>
+                        <p data-en="Latest IoT solutions and home automation systems" data-ar="أحدث حلول إنترنت الأشياء وأنظمة الأتمتة المنزلية">Latest IoT solutions and home automation systems</p>
+                    </div>
+                    <div class="overview-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4 data-en="Security & Privacy" data-ar="الأمان والخصوصية">Security & Privacy</h4>
+                        <p data-en="Advanced security systems with privacy protection" data-ar="أنظمة أمان متقدمة مع حماية الخصوصية">Advanced security systems with privacy protection</p>
+                    </div>
+                    <div class="overview-item">
+                        <i class="fas fa-leaf"></i>
+                        <h4 data-en="Energy Efficiency" data-ar="كفاءة الطاقة">Energy Efficiency</h4>
+                        <p data-en="Sustainable solutions for reduced energy consumption" data-ar="حلول مستدامة لتقليل استهلاك الطاقة">Sustainable solutions for reduced energy consumption</p>
+                    </div>
+                    <div class="overview-item">
+                        <i class="fas fa-headset"></i>
+                        <h4 data-en="24/7 Support" data-ar="دعم على مدار الساعة">24/7 Support</h4>
+                        <p data-en="Round-the-clock technical support and maintenance" data-ar="دعم فني وصيانة على مدار الساعة">Round-the-clock technical support and maintenance</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services content section -->
+        <section id="services-content">
+            <div class="container">
+                <h2 data-en="Our Comprehensive Services" data-ar="خدماتنا الشاملة">Our Comprehensive Services</h2>
+                
+                <div class="service-grid">
+                    <div class="content-block animate-on-scroll">
+                        <h3><i class="fas fa-drafting-compass service-icon"></i> <span data-en="Smart Real Estate Development" data-ar="تطوير العقارات الذكية">Smart Real Estate Development</span></h3>
+                        <ul>
+                            <li data-en="AI-powered market analysis and feasibility studies" data-ar="تحليل السوق بالذكاء الاصطناعي ودراسات الجدوى">AI-powered market analysis and feasibility studies</li>
+                            <li data-en="Smart architectural design with IoT integration" data-ar="التصميم المعماري الذكي مع تكامل إنترنت الأشياء">Smart architectural design with IoT integration</li>
+                            <li data-en="Project management using advanced monitoring systems" data-ar="إدارة المشاريع باستخدام أنظمة المراقبة المتقدمة">Project management using advanced monitoring systems</li>
+                            <li data-en="Digital marketing with VR/AR virtual tours" data-ar="التسويق الرقمي مع الجولات الافتراضية بتقنية الواقع المعزز">Digital marketing with VR/AR virtual tours</li>
+                            <li data-en="Smart property management and customer service systems" data-ar="أنظمة إدارة العقارات الذكية وخدمة العملاء">Smart property management and customer service systems</li>
+                        </ul>
+                        <div class="service-features">
+                            <span class="feature-tag" data-en="AI Integration" data-ar="تكامل الذكاء الاصطناعي">AI Integration</span>
+                            <span class="feature-tag" data-en="IoT Ready" data-ar="جاهز لإنترنت الأشياء">IoT Ready</span>
+                        </div>
+                    </div>
+                    
+                    <div class="content-block animate-on-scroll">
+                        <h3><i class="fas fa-chart-line service-icon"></i> <span data-en="Smart Investment Solutions" data-ar="حلول الاستثمار الذكية">Smart Investment Solutions</span></h3>
+                        <ul>
+                            <li data-en="Big data analytics for market trends and predictions" data-ar="تحليل البيانات الضخمة لاتجاهات السوق والتنبؤات">Big data analytics for market trends and predictions</li>
+                            <li data-en="AI-driven investment strategies and portfolio optimization" data-ar="استراتيجيات الاستثمار المدعومة بالذكاء الاصطناعي">AI-driven investment strategies and portfolio optimization</li>
+                            <li data-en="Automated risk assessment and management tools" data-ar="أدوات تقييم وإدارة المخاطر الآلية">Automated risk assessment and management tools</li>
+                            <li data-en="Smart contracts and blockchain-based transactions" data-ar="العقود الذكية والمعاملات القائمة على البلوك تشين">Smart contracts and blockchain-based transactions</li>
+                            <li data-en="Real-time performance tracking and reporting" data-ar="تتبع الأداء والتقارير في الوقت الفعلي">Real-time performance tracking and reporting</li>
+                        </ul>
+                        <div class="service-features">
+                            <span class="feature-tag" data-en="Blockchain" data-ar="البلوك تشين">Blockchain</span>
+                            <span class="feature-tag" data-en="Big Data" data-ar="البيانات الضخمة">Big Data</span>
+                        </div>
+                    </div>
+                    
+                    <div class="content-block animate-on-scroll">
+                        <h3><i class="fas fa-home service-icon"></i> <span data-en="Smart Property Management" data-ar="إدارة العقارات الذكية">Smart Property Management</span></h3>
+                        <ul>
+                            <li data-en="IoT-enabled monitoring and predictive maintenance" data-ar="المراقبة والصيانة التنبؤية بتقنية إنترنت الأشياء">IoT-enabled monitoring and predictive maintenance</li>
+                            <li data-en="Smart energy management and automation systems" data-ar="إدارة الطاقة الذكية وأنظمة الأتمتة">Smart energy management and automation systems</li>
+                            <li data-en="AI-powered financial management and analytics" data-ar="الإدارة المالية والتحليلات المدعومة بالذكاء الاصطناعي">AI-powered financial management and analytics</li>
+                            <li data-en="Automated tenant services and communication platforms" data-ar="خدمات المستأجرين الآلية ومنصات التواصل">Automated tenant services and communication platforms</li>
+                            <li data-en="Smart security systems with facial recognition" data-ar="أنظمة الأمان الذكية مع التعرف على الوجوه">Smart security systems with facial recognition</li>
+                        </ul>
+                        <div class="service-features">
+                            <span class="feature-tag" data-en="IoT Sensors" data-ar="أجهزة استشعار IoT">IoT Sensors</span>
+                            <span class="feature-tag" data-en="Automation" data-ar="الأتمتة">Automation</span>
+                        </div>
+                    </div>
+                    
+                    <div class="content-block animate-on-scroll">
+                        <h3><i class="fas fa-bullhorn service-icon"></i> <span data-en="Digital Real Estate Marketing" data-ar="التسويق العقاري الرقمي">Digital Real Estate Marketing</span></h3>
+                        <ul>
+                            <li data-en="AI-powered targeted advertising and lead generation" data-ar="الإعلانات المستهدفة وتوليد العملاء المحتملين بالذكاء الاصطناعي">AI-powered targeted advertising and lead generation</li>
+                            <li data-en="Virtual and augmented reality property showcases" data-ar="عروض العقارات بالواقع الافتراضي والمعزز">Virtual and augmented reality property showcases</li>
+                            <li data-en="Social media automation and content management" data-ar="أتمتة وسائل التواصل الاجتماعي وإدارة المحتوى">Social media automation and content management</li>
+                            <li data-en="Data-driven market analysis and customer insights" data-ar="تحليل السوق ورؤى العملاء المبنية على البيانات">Data-driven market analysis and customer insights</li>
+                            <li data-en="CRM integration and automated sales processes" data-ar="تكامل إدارة علاقات العملاء وعمليات البيع الآلية">CRM integration and automated sales processes</li>
+                        </ul>
+                        <div class="service-features">
+                            <span class="feature-tag" data-en="VR/AR" data-ar="الواقع المعزز/الافتراضي">VR/AR</span>
+                            <span class="feature-tag" data-en="CRM" data-ar="إدارة العملاء">CRM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Process Timeline -->
+                <div class="service-process animate-on-scroll">
+                    <h3 data-en="Our Smart Service Process" data-ar="عملية خدماتنا الذكية">Our Smart Service Process</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-icon"><i class="fas fa-search"></i></div>
+                            <h4 data-en="Analysis & Planning" data-ar="التحليل والتخطيط">Analysis & Planning</h4>
+                            <p data-en="Comprehensive market analysis using AI and big data" data-ar="تحليل شامل للسوق باستخدام الذكاء الاصطناعي والبيانات الضخمة">Comprehensive market analysis using AI and big data</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon"><i class="fas fa-cogs"></i></div>
+                            <h4 data-en="Smart Design & Development" data-ar="التصميم والتطوير الذكي">Smart Design & Development</h4>
+                            <p data-en="Integration of IoT and smart technologies in design phase" data-ar="دمج إنترنت الأشياء والتقنيات الذكية في مرحلة التصميم">Integration of IoT and smart technologies in design phase</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon"><i class="fas fa-hammer"></i></div>
+                            <h4 data-en="Smart Implementation" data-ar="التنفيذ الذكي">Smart Implementation</h4>
+                            <p data-en="Advanced project management with real-time monitoring" data-ar="إدارة مشاريع متقدمة مع المراقبة في الوقت الفعلي">Advanced project management with real-time monitoring</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon"><i class="fas fa-headset"></i></div>
+                            <h4 data-en="Smart Support & Maintenance" data-ar="الدعم والصيانة الذكية">Smart Support & Maintenance</h4>
+                            <p data-en="AI-powered predictive maintenance and 24/7 support" data-ar="صيانة تنبؤية بالذكاء الاصطناعي ودعم على مدار الساعة">AI-powered predictive maintenance and 24/7 support</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Service Section -->
+                <div class="featured-service animate-on-scroll">
+                    <h3 data-en="Featured Service: Complete Smart Home Ecosystem" data-ar="خدمة مميزة: النظام البيئي المتكامل للبيت الذكي">Featured Service: Complete Smart Home Ecosystem</h3>
+                    <div class="featured-service-content">
+                        <div class="featured-service-image">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Smart Home Ecosystem" onerror="this.src='https://placehold.co/600x400/3792AC/FFFFFF?text=Smart+Home+Ecosystem';">
+                        </div>
+                        <div class="featured-service-text">
+                            <p data-en="We create comprehensive smart home ecosystems that integrate lighting, climate control, security, entertainment, and energy management into one seamless experience. Our solutions use machine learning to adapt to your lifestyle, reducing energy consumption by up to 40% while enhancing comfort and security." data-ar="نقوم بإنشاء أنظمة بيئية متكاملة للبيوت الذكية تدمج الإضاءة والتحكم في المناخ والأمان والترفيه وإدارة الطاقة في تجربة واحدة سلسة. تستخدم حلولنا التعلم الآلي للتكيف مع نمط حياتك، مما يقلل استهلاك الطاقة بنسبة تصل إلى 40% مع تعزيز الراحة والأمان.">
+                                We create comprehensive smart home ecosystems that integrate lighting, climate control, security, entertainment, and energy management into one seamless experience. Our solutions use machine learning to adapt to your lifestyle, reducing energy consumption by up to 40% while enhancing comfort and security.
+                            </p>
+                            <div class="ecosystem-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span data-en="Smart Lighting" data-ar="الإضاءة الذكية">Smart Lighting</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-thermometer-half"></i>
+                                    <span data-en="Climate Control" data-ar="التحكم في المناخ">Climate Control</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span data-en="Security System" data-ar="نظام الأمان">Security System</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-music"></i>
+                                    <span data-en="Entertainment Hub" data-ar="مركز الترفيه">Entertainment Hub</span>
+                                </div>
+                            </div>
+                            <div class="feature-buttons">
+                                <a href="contact.html" class="btn btn-primary" data-en="Get Smart Consultation" data-ar="احصل على استشارة ذكية">Get Smart Consultation</a>
+                                <a href="#demo-request" class="btn btn-secondary" data-en="Request Demo" data-ar="طلب عرض توضيحي">Request Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technology Partners -->
+                <div class="tech-partners animate-on-scroll">
+                    <h3 data-en="Our Technology Partners" data-ar="شركاؤنا التقنيون">Our Technology Partners</h3>
+                    <div class="partners-grid">
+                        <div class="partner-item">
+                            <i class="fab fa-google"></i>
+                            <span data-en="Google Nest" data-ar="جوجل نيست">Google Nest</span>
+                        </div>
+                        <div class="partner-item">
+                            <i class="fab fa-amazon"></i>
+                            <span data-en="Amazon Alexa" data-ar="أمازون أليكسا">Amazon Alexa</span>
+                        </div>
+                        <div class="partner-item">
+                            <i class="fab fa-apple"></i>
+                            <span data-en="Apple HomeKit" data-ar="أبل هوم كيت">Apple HomeKit</span>
+                        </div>
+                        <div class="partner-item">
+                            <i class="fas fa-microchip"></i>
+                            <span data-en="Smart Things" data-ar="سمارت ثينجز">Smart Things</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> <span data-en="Albyout Alzakiya Smart Homes. All rights reserved." data-ar="البيوت الذكية. جميع الحقوق محفوظة.">Albyout Alzakiya Smart Homes. All rights reserved.</span></p>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Albyout Alzakiya - Smart real estate development and investment company offering innovative residential and commercial solutions combining luxury, technology, and sustainability.">
+    <meta name="keywords" content="smart homes, real estate development, property investment, sustainable buildings, luxury homes, Albyout Alzakiya">
+    <meta name="author" content="Albyout Alzakiya">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Albyout Alzakiya - Building the Future with Smart Solutions">
+    <meta property="og:description" content="Innovative residential and commercial solutions combining luxury, technology, and sustainability.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="logo.png">
+
+    <title data-en="Albyout Alzakiya - Home" data-ar="البيوت الذكية - الرئيسية">Albyout Alzakiya - Home</title>
+    
+    <!-- Preconnect for better performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Base stylesheet (shared styles) -->
+    <link rel="stylesheet" href="base.css">
+    <!-- Page-specific stylesheet -->
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <!-- Company logo -->
+            <div class="logo-container">
+                <img src="logo.png" alt="البيوت الذكية - Albyout Alzakiya" class="logo">
+            </div>
+            
+            <!-- Navigation menu -->
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="index.html" data-en="Home" data-ar="الرئيسية" class="active">Home</a></li>
+                        <li><a href="about.html" data-en="About Us" data-ar="من نحن">About Us</a></li>
+                        <li><a href="services.html" data-en="Services" data-ar="خدماتنا">Services</a></li>
+                        <li><a href="contact.html" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <!-- Header actions -->
+            <div class="header-actions">
+                <!-- Theme toggle button -->
+                <div class="theme-switcher">
+                    <button id="theme-toggle" data-theme="light" aria-label="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+                
+                <div class="lang-switcher">
+                    <button id="lang-toggle" data-lang="en" aria-label="Toggle Language">
+                        <span class="lang-icon">🌐</span>
+                        <span data-en="العربية" data-ar="English">العربية</span>
+                    </button>
+                </div>
+                
+                <!-- Mobile menu toggle button -->
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section for home page with automatic image slider -->
+        <section id="home" class="hero">
+            <!-- Multiple Hero background images with automatic slideshow -->
+            <div class="hero-slider">
+                <div class="hero-slide active" data-bg="home .jpg">
+                    <div class="slide-overlay"></div>
+                </div>
+                <div class="hero-slide" data-bg="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080">
+                    <div class="slide-overlay"></div>
+                </div>
+                <div class="hero-slide" data-bg="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080">
+                    <div class="slide-overlay"></div>
+                </div>
+            </div>
+            
+            <!-- Hero Content -->
+            <div class="hero-content">
+                <div class="container">
+                    <div class="hero-text">
+                        <h1 data-en="Building the Future with Smart Solutions" data-ar="نبني المستقبل بحلول ذكية">Building the Future with Smart Solutions</h1>
+                        <p data-en="Innovative residential and commercial solutions combining luxury, technology, and sustainability." data-ar="حلول سكنية وتجارية مبتكرة تجمع بين الفخامة، التكنولوجيا، والاستدامة.">Innovative residential and commercial solutions combining luxury, technology, and sustainability.</p>
+                        
+                        <!-- CTA Buttons -->
+                        <div class="hero-buttons">
+                            <a href="services.html" class="btn btn-primary" data-en="Our Services" data-ar="خدماتنا">Our Services</a>
+                            <a href="contact.html" class="btn btn-secondary" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slider Navigation -->
+            <div class="hero-navigation">
+                <div class="hero-dots">
+                    <button class="dot active" data-slide="0" aria-label="Slide 1"></button>
+                    <button class="dot" data-slide="1" aria-label="Slide 2"></button>
+                    <button class="dot" data-slide="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="hero-arrows">
+                    <button class="arrow-btn prev-btn" aria-label="Previous slide">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="arrow-btn next-btn" aria-label="Next slide">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="hero-progress">
+                <div class="progress-bar"></div>
+            </div>
+        </section>
+
+        <!-- Introduction section for home page -->
+        <section id="introduction">
+            <div class="container">
+                <h3 data-en="Welcome to Albyout Alzakiya" data-ar="مرحباً بكم في البيوت الذكية">Welcome to Albyout Alzakiya</h3>
+                
+                <!-- قسم الصور التفاعلية الجديد -->
+                <div class="interactive-showcase">
+                    <div class="showcase-container">
+                        <div class="showcase-image-container">
+                            <img id="showcase-image" 
+                                 src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500" 
+                                 alt="Smart Home Technology" 
+                                 class="showcase-image">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h4 id="showcase-title" data-en="Smart Home Technology" data-ar="تقنيات المنزل الذكي">Smart Home Technology</h4>
+                                    <p id="showcase-description" data-en="Experience the future of living with our intelligent home solutions" data-ar="اكتشف مستقبل السكن مع حلولنا الذكية">Experience the future of living with our intelligent home solutions</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-controls">
+                            <button class="control-btn active" data-image="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500" 
+                                    data-title-en="Smart Home Technology" data-title-ar="تقنيات المنزل الذكي"
+                                    data-desc-en="Experience the future of living with our intelligent home solutions" 
+                                    data-desc-ar="اكتشف مستقبل السكن مع حلولنا الذكية">
+                                <i class="fas fa-home"></i>
+                                <span data-en="Smart Homes" data-ar="المنازل الذكية">Smart Homes</span>
+                            </button>
+                            <button class="control-btn" data-image="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500" 
+                                    data-title-en="Sustainable Living" data-title-ar="الحياة المستدامة"
+                                    data-desc-en="Eco-friendly solutions that protect our environment" 
+                                    data-desc-ar="حلول صديقة للبيئة تحمي كوكبنا">
+                                <i class="fas fa-leaf"></i>
+                                <span data-en="Sustainability" data-ar="الاستدامة">Sustainability</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image gallery section -->
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" alt="Smart Buildings" class="gallery-image">
+                        <h4 data-en="Smart Buildings" data-ar="المباني الذكية">Smart Buildings</h4>
+                        <p data-en="Modern architecture with integrated technology" data-ar="عمارة حديثة مع تقنيات متكاملة">Modern architecture with integrated technology</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" alt="Luxury Living" class="gallery-image">
+                        <h4 data-en="Luxury Living" data-ar="الحياة الفاخرة">Luxury Living</h4>
+                        <p data-en="Premium residential solutions for comfort" data-ar="حلول سكنية راقية للراحة">Premium residential solutions for comfort</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1545987796-200677ee1011?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" alt="Sustainable Design" class="gallery-image">
+                        <h4 data-en="Sustainable Design" data-ar="التصميم المستدام">Sustainable Design</h4>
+                        <p data-en="Eco-friendly solutions for the future" data-ar="حلول صديقة للبيئة للمستقبل">Eco-friendly solutions for the future</p>
+                    </div>
+                </div>
+
+                <!-- محتوى جديد محسن -->
+                <div class="enhanced-content">
+                    <div class="content-section">
+                        <div class="content-card">
+                            <div class="card-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h4 data-en="Innovation at Its Core" data-ar="الابتكار في المقدمة">Innovation at Its Core</h4>
+                            <p data-en="We harness cutting-edge technology to create living spaces that anticipate your needs and enhance your daily experience." data-ar="نستخدم أحدث التقنيات لإنشاء مساحات معيشية تتوقع احتياجاتك وتعزز تجربتك اليومية.">We harness cutting-edge technology to create living spaces that anticipate your needs and enhance your daily experience.</p>
+                        </div>
+                        <div class="content-card">
+                            <div class="card-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h4 data-en="Human-Centered Design" data-ar="تصميم يركز على الإنسان">Human-Centered Design</h4>
+                            <p data-en="Every element is carefully crafted to create comfortable, functional, and beautiful spaces that truly feel like home." data-ar="كل عنصر مصمم بعناية لإنشاء مساحات مريحة وعملية وجميلة تشعرك بالمنزل حقاً.">Every element is carefully crafted to create comfortable, functional, and beautiful spaces that truly feel like home.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- النص الأصلي مع تحسينات -->
+                <div class="company-description">
+                    <p data-en="Albyout Alzakiya Real Estate Development and Investment Company was founded with an ambitious vision to revolutionize the real estate sector by offering smart residential and commercial solutions that combine luxury, technology, and sustainability. We strive to deliver innovative real estate projects that meet modern market needs and provide a unique living experience." data-ar="تأسست شركة البيوت الذكية للتطوير والاستثمار العقاري برؤية طموحة لإحداث ثورة في قطاع العقارات من خلال تقديم حلول سكنية وتجارية ذكية تجمع بين الفخامة، التكنولوجيا، والاستدامة. نحن نسعى لتقديم مشاريع عقارية مبتكرة تلبي احتياجات السوق الحديثة وتوفر تجربة معيشية فريدة من نوعها.">Albyout Alzakiya Real Estate Development and Investment Company was founded with an ambitious vision to revolutionize the real estate sector by offering smart residential and commercial solutions that combine luxury, technology, and sustainability. We strive to deliver innovative real estate projects that meet modern market needs and provide a unique living experience.</p>
+                
+                    <p data-en="Our mission is to provide integrated real estate solutions that combine sustainability and modern designs to meet our clients' aspirations and achieve the highest standards of quality and innovation." data-ar="رسالتنا هي تقديم حلول عقارية متكاملة تجمع الاستدامة، والتصاميم العصرية لتلبية تطلعات عملائنا وتحقيق أعلى معايير الجودة والابتكار.">Our mission is to provide integrated real estate solutions that combine sustainability and modern designs to meet our clients' aspirations and achieve the highest standards of quality and innovation.</p>
+                
+                    <p data-en="Explore our site to learn more about our vision, values, services, and how we are building the future with smart solutions." data-ar="استكشف موقعنا لمعرفة المزيد عن رؤيتنا وقيمنا وخدماتنا، وكيف نبني المستقبل بحلول ذكية.">Explore our site to learn more about our vision, values, services, and how we are building the future with smart solutions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics section -->
+        <section id="statistics">
+            <div class="container">
+                <h3 data-en="Our Achievements" data-ar="إنجازاتنا">Our Achievements</h3>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+                        <h4 data-en="100+" data-ar="100+">100+</h4>
+                        <p data-en="Projects Completed" data-ar="المشاريع المنجزة">Projects Completed</p>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-users"></i></div>
+                        <h4 data-en="50+" data-ar="50+">50+</h4>
+                        <p data-en="Happy Clients" data-ar="عملاء سعداء">Happy Clients</p>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-award"></i></div>
+                        <h4 data-en="30+" data-ar="30+">30+</h4>
+                        <p data-en="Awards Won" data-ar="جوائز فازت بها الشركة">Awards Won</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Albyout Alzakiya. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
